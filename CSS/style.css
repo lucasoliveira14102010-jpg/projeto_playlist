@@ -1,0 +1,25 @@
+/*código base para todas as páginas*/
+body {
+    background-color: rgb(135, 191, 243);
+}
+.botao {
+  background-color: #007BFF; 
+  color: white;             
+  padding: 10px 20px;       
+  border:groove rgb(72, 112, 223);             
+  border-radius: 5px;       
+  cursor: pointer;          
+  font-size: 16px;
+  transition: background-color 0.3s; 
+}
+
+.botao:hover {
+  background-color: #0056b3; 
+}
+
+h1{
+  padding-left: 50%;
+  font-family: monospace;
+  color: white;
+
+}
