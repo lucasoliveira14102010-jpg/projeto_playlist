@@ -1,19 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./CSS/lucas.css">
-    </head>
-        <body>
-            <div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas - Playlist</title>
+  <link rel="stylesheet" href="./CSS/lucas.css">
+</head>
 
-            </div>
-            <div>
-                <a href="./playlist.html">
-                <button class=botao>Página inicial</button>
-                </a>
-            </div>
-        </body>
+<body>
+
+<h1>Playlist do Lucas</h1>
+
+<div class="container-principal">
+
+  <h2>Infinit Hyperdeath</h2>
+
+  <div class="grupo">
+
+    <div class="musica">
+      <img src="imagens/album_infinit_hyperdeath.jpg"
+      onclick="abrirModal('imagens/album_infinit_hyperdeath.jpg','Castle Vein','musicas/Castle Vein.mp3','https://open.spotify.com/intl-pt/track/3BxXcWY0ZYkNBhiOvy6vWr/')">
+      <p>Castle Vein</p>
+    </div>
+
+    <div class="musica">
+      <img src="imagens/album_infinit_hyperdeath.jpg"
+      onclick="abrirModal('imagens/album_infinit_hyperdeath.jpg','Glory','musicas/Glory.mp3','https://open.spotify.com/intl-pt/track/3zjFsdNZtv42msRm7opWzN')">
+      <p>Glory</p>
+    </div>
+
+    <div class="musica">
+      <img src="imagens/album_infinit_hyperdeath.jpg"
+      onclick="abrirModal('imagens/album_infinit_hyperdeath.jpg','Requiem','musicas/Requiem.mp3','https://open.spotify.com/intl-pt/track/5vX8lwHNqCneOuZ2Kobz9O')">
+      <p>Requiem</p>
+    </div>
+
+    <div class="musica">
+      <img src="imagens/album_infinit_hyperdeath.jpg"
+      onclick="abrirModal('imagens/album_infinit_hyperdeath.jpg','Unstoppable Force','musicas/Unstoppable Force.mp3','https://open.spotify.com/intl-pt/track/1GFKwolZUgJsowkcA9KrrC')">
+      <p>Unstoppable Force</p>
+    </div>
+
+    <div class="musica">
+      <img src="imagens/album_infinit_hyperdeath.jpg"
+      onclick="abrirModal('imagens/album_infinit_hyperdeath.jpg','Versus','musicas/Versus.mp3','https://open.spotify.com/intl-pt/track/42JCrOtPsH8udSdr6dx87y')">
+      <p>Versus</p>
+    </div>
+
+  </div>
+
+  <h2>Perfect Hatred</h2>
+
+  <div class="grupo">
+
+    <div class="musica">
+      <img src="imagens/album_perfect_hatred.jpg"
+      onclick="abrirModal('imagens/album_perfect_hatred.jpg','Sands of Tide','musicas/Sands of Tide.mp3','https://open.spotify.com/intl-pt/track/3lG6PDZgETjnnxT6kT58L3')">
+      <p>Sands of Tide</p>
+    </div>
+
+    <div class="musica">
+      <img src="imagens/album_perfect_hatred.jpg"
+      onclick="abrirModal('imagens/album_perfect_hatred.jpg','Deep Blue','musicas/Deep Blue.mp3','https://open.spotify.com/intl-pt/track/1TFOBKZmnYMZ1zSUot8jkq')">
+      <p>Deep Blue</p>
+    </div>
+
+    <div class="musica">
+      <img src="imagens/album_perfect_hatred.jpg"
+      onclick="abrirModal('imagens/album_perfect_hatred.jpg','He Is the Light in My Darkness','musicas/He Is the Light in My Darkness.mp3','https://open.spotify.com/intl-pt/track/0IYiwalDKzlCH2Esfydbpq')">
+      <p>He Is the Light in My Darkness</p>
+    </div>
+
+    <div class="musica">
+      <img src="imagens/album_perfect_hatred.jpg"
+      onclick="abrirModal('imagens/album_perfect_hatred.jpg','Altars of Apostasy','musicas/Altars of Apostasy.mp3','https://open.spotify.com/intl-pt/track/3TcArgDnTVihS8I1FHF0ns')">
+      <p>Altars of Apostasy</p>
+    </div>
+
+    <div class="musica">
+      <img src="imagens/album_perfect_hatred.jpg"
+      onclick="abrirModal('imagens/album_perfect_hatred.jpg','The Death of Gods Will','musicas/The Death of Gods Will.mp3','https://open.spotify.com/intl-pt/track/2cYAz9n44mojy3RtQXwwkz')">
+      <p>The Death of Gods Will</p>
+    </div>
+
+  </div>
+
+  <div class="voltar">
+    <a href="./playlist.html">
+      <button class="botao">Página inicial</button>
+    </a>
+  </div>
+
+</div>
+
+<!-- MODAL -->
+<div id="playerModal" class="modal">
+  <div class="modal-content">
+
+    <span class="fechar" onclick="fecharModal()">&times;</span>
+
+    <img id="modalImg">
+    <h2 id="modalTitulo"></h2>
+
+    <audio id="modalAudio" controls></audio>
+
+    <a id="spotifyLink" target="_blank">
+      <button class="botao">Ouvir no Spotify</button>
+    </a>
+
+  </div>
+</div>
+
+<script>
+
+function abrirModal(img, titulo, musica, link) {
+  document.getElementById("playerModal").style.display = "flex";
+
+  document.getElementById("modalImg").src = img;
+  document.getElementById("modalTitulo").innerText = titulo;
+  document.getElementById("modalAudio").src = musica;
+  document.getElementById("spotifyLink").href = link;
+}
+
+function fecharModal() {
+  let modal = document.getElementById("playerModal");
+  let audio = document.getElementById("modalAudio");
+
+  modal.style.display = "none";
+  audio.pause();
+  audio.currentTime = 0;
+}
+
+// fechar clicando fora
+window.onclick = function(event) {
+  let modal = document.getElementById("playerModal");
+  if (event.target === modal) {
+    fecharModal();
+  }
+}
+
+// volume padrão
+window.onload = function() {
+  document.getElementById("modalAudio").volume = 0.25;
+}
+
+</script>
+
+</body>
 </html>
