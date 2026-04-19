@@ -1,6 +1,7 @@
 body {
   background: linear-gradient(red, orange);
   margin: 0;
+  padding: 20px;
 }
 
 /* Títulos */
@@ -13,18 +14,17 @@ h1, h2 {
 /* Container */
 .container-principal {
   background-color: rgb(32, 32, 32);
-  margin: 20px;
   border-radius: 10px;
   padding: 20px;
 }
 
 /* Grupo de músicas */
 .grupo {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* FIXO */
   gap: 40px;
   margin-top: 20px;
+  justify-items: center;
 }
 
 /* Card da música */
@@ -33,7 +33,9 @@ h1, h2 {
   flex-direction: column;
   align-items: center;
 
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
+
   padding: 15px;
 
   border: 2px solid white;
@@ -58,6 +60,12 @@ h1, h2 {
 .musica p {
   font-family: monospace;
   color: white;
+  text-align: center;
+
+  max-width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Botões */

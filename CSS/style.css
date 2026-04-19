@@ -1,12 +1,101 @@
 /*código base para todas as páginas*/
 body {
-    background-color: rgb(135, 191, 243);
+  background: linear-gradient(rgb(170, 190, 255), rgb(173, 255, 250));
+  margin: 0;
 }
+
+.container-gabriel,
+.container-hartur,
+.container-julia,
+.container-lucas {
+  transition: 0.5s ease-in-out;
+
+  width: 100%;
+  max-width:500px;
+}
+
+/* Container GABRIEL*/
+.container-gabriel {
+  background-color: rgb(224, 236, 255);
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Muda a cor do fundo GABRIEL*/
+body:has(.container-gabriel .botao:hover){
+  background: rgb(32, 32, 32);
+}
+
+body:has(.container-gabriel .botao:hover) .container-gabriel{
+  background-color: rgb(184, 184, 184);
+}
+
+/* Container HARTUR*/
+.container-hartur {
+  background-color: rgb(224, 236, 255);
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Muda a cor do fundo HARTUR*/
+body:has(.container-hartur .botao:hover){
+  background: rgb(32, 87, 0);
+}
+
+body:has(.container-hartur .botao:hover) .container-hartur{
+  background-color: rgb(60, 255, 0);
+}
+
+/* Container JULIA*/
+.container-julia {
+  background-color: rgb(224, 236, 255);
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Muda a cor do fundo JULIA*/
+body:has(.container-julia .botao:hover){
+  background: rgb(72, 157, 255);
+}
+
+body:has(.container-julia .botao:hover) .container-julia{
+  background-color: rgb(0, 26, 255);
+}
+
+/* Container LUCAS*/
+.container-lucas {
+  background-color: rgb(224, 236, 255);
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Muda a cor do fundo LUCAS*/
+body:has(.container-lucas .botao:hover){
+  background: rgb(255, 0, 0);
+}
+
+body:has(.container-lucas .botao:hover) .container-lucas{
+  background-color: rgb(255, 109, 109);
+}
+
+/*Imagem*/
+img{
+  width:100px;
+  height:100px;
+
+  border-radius: 30%;
+}
+
 .botao {
-  background-color: #007BFF; 
-  color: white;             
+  display: inline-block;
+
+  background-color: hsl(0, 0%, 100%);              
   padding: 10px 20px;       
-  border:groove rgb(72, 112, 223);             
+  border:groove rgb(197, 197, 197);             
   border-radius: 5px;       
   cursor: pointer;          
   font-size: 16px;
@@ -14,12 +103,23 @@ body {
 }
 
 .botao:hover {
-  background-color: #0056b3; 
+  background-color: #414141;
+  color:white;
+   
 }
 
 h1{
+  
   padding-left: 50%;
   font-family: monospace;
   color: white;
 
+}
+
+.grupo{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 40px;
+  margin-top: 20px;
+  justify-items: center;
 }
