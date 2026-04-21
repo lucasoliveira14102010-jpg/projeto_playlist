@@ -7,13 +7,156 @@
         <link rel="stylesheet" href="./CSS/julia.css">
     </head>
         <body>
+             <!--Artista 1-->
             <div>
+                <!--padrão a seguir em todas paginas html-->
+                <h1>Playlist de: Júlia Ximenes Santos Ferreira</h1>
+
+            <div class="container-principal">
+
+                <h2>Toby Fox</h2>
+
+
+            <div class="grupo_toby_fox">
+                
+            
+            <div class="musica">
+                <img src="./imagens/imgs/hopes_and_dreams.jpg"
+                onclick="abrirModal('imagens/imgs/hopes_and_dreams.jpg','Hopes and dreams','musicas/audios julia/toby fox/Hopes_And_Dreams_KLICKAUD.mp3','https://open.spotify.com/intl-pt/track/7CMVo848b9LsUtVavIoiXC?si=2b565928e988417e')"> 
+                <p>Hopes and dreams</p>
+            </div>
+            <div class="musica">
+                <img src="./imagens/imgs/finale.jpg"
+                onclick="abrirModal('imagens/imgs/finale.jpg','Finale','musicas/audios julia/toby fox/Finale_KLICKAUD.mp3','https://open.spotify.com/intl-pt/track/4kNKL8kCCV3vt9U2k28Lyx?si=059b80d3055f4ce9')">  
+                <p>Finale</p>  
+            </div>
+            <div class="musica">  
+                <img src="./imagens/imgs/Asgore.jpg"
+            onclick="abrirModal('imagens/imgs/Asgore.jpg','Asgore','musicas/audios julia/toby fox/ASGORE_KLICKAUD.mp3','https://open.spotify.com/intl-pt/track/0ybMBs8mKdAP9WSnFTiZvs?si=c2f2822bdea8424f')">
+            <p>Asgore</p> 
+            </div> 
 
             </div>
-            <div>
-                <a href="./playlist.html">
-                <button class=botao>Página inicial</button>
-                </a>
+
+
+            <div class="grupo_toby_fox">
+                
+
+            <div class="musica">
+                <img src="./imagens/imgs/the_world_revolving.jpg"
+                onclick="abrirModal('imagens/imgs/the_world_revolving.jpg','The world revolving','musicas/audios julia/toby fox/THE_WORLD_REVOLVING_KLICKAUD.mp3','https://open.spotify.com/intl-pt/track/5QBozbgRWIYDSriHCRTsXd?si=8d242699297541e5')"> 
+                <p>The world revolving</p> 
             </div>
+
+            <div class="musica">
+                <img src="./imagens/imgs/attack_of_the_killer_queen.jpg"
+                onclick="abrirModal('imagens/imgs/attack_of_the_killer_queen.jpg','Attack of the killer queen','musicas/audios julia/toby fox/Attack_Of_The_Killer_Queen_Feat_Lena_Raine_Marcy_Nabors_KLICKAUD.mp3','https://open.spotify.com/intl-pt/track/1K45maA9jDR1kBRpojtPmO?si=549e0f2785844a40')"> 
+                <p>Attack of the killer queen</p>
+            </div>
+
+            <div class="musica">
+                <img src="./imagens/imgs/raise_up_your_bat.jpg"
+                onclick="abrirModal('imagens/imgs/raise_up_your_bat.jpg','Raise up your bat','musicas/audios julia/toby fox/Raise_Up_Your_Bat_KLICKAUD.mp3','https://open.spotify.com/intl-pt/track/2yvLgJd9ZcOUwdaPBhsKhn?si=10ff03737a3d4bb5')">   
+                <p>Raise up your bat</p>
+            </div>
+
+            </div>
+
+            
+            
+            
+                <h2 class="jack">Jack Stauber</h2>
+            <div class="grupo">
+            
+            <div class="musica">
+                <img src="./imagens/imgs/baby_hotline.jpg"
+                onclick="abrirModal('imagens/imgs/baby_hotline.jpg','Baby hotline','musicas/audios julia/Jack stauber/Baby_Hotline_Jack_Stauber_KLICKAUD.mp3','https://open.spotify.com/intl-pt/track/1R8kvV2AgNPCA2Pp4Im1Ao?si=f5324d9df28243f9')"> 
+                <p>Baby hotline</p>
+            </div>
+            <div class="musica">
+                <img src="./imagens/imgs/milk.jpg"
+                onclick="abrirModal('imagens/imgs/milk.jpg','Milk','musicas/audios julia/Jack stauber/Jack_Stauber_-_Milk_KLICKAUD.mp3','https://open.spotify.com/intl-pt/track/1w4JPzTHAcMdAGzDLzXCjF?si=862bd1e203494994')">    
+                <p>Milk</p>
+            </div>
+            <div class="musica">   
+                <img src="./imagens/imgs/fighter.jpg"
+            onclick="abrirModal('imagens/imgs/fighter.jpg','Fighter','musicas/audios julia/Jack stauber/Fighter_extended_-_Jack_Stauber_KLICKAUD.mp3','https://open.spotify.com/intl-pt/track/7oMVBM1xAwavu697KyBQUY?si=451d1cf174d24d99')">
+            <p>Fighter</p>
+            </div>    
+
+            <div class="musica">
+                <img src="./imagens/imgs/hamantha.jpg"
+                onclick="abrirModal('imagens/imgs/hamantha.jpg','Hamantha','musicas/audios julia/Jack stauber/The_Ballad_Of_Hamantha_-_Jack_Stauber_KLICKAUD.mp3','https://open.spotify.com/intl-pt/track/0jZnQlPHMW8DVuwNL4vpFf?si=54ba15f32161475d')"> 
+                <p>Hamantha</p>
+            </div>
+
+            
+
+            </div>
+
+            <div>
+            
+                
+                <!--Botão para Home-->
+            <div class="voltar">
+                <a href="./playlist.html">
+                <button class=botao>Página inicial</button></a>
+            </div>  
+            <!-- MODAL -->
+            <div id="playerModal" class="modal">
+            <div class="modal-content">
+
+                <span class="fechar" onclick="fecharModal()">&times;</span>
+
+                <img id="modalImg">
+                <h2 id="modalTitulo"></h2>
+
+                 <audio id="modalAudio" controls></audio>
+
+                <a id="spotifyLink" target="_blank">
+                    
+                <button class="botao">Ouvir no Spotify</button>
+                </a>
+
+            </div>
+            </div>
+
+<script>
+
+function abrirModal(img, titulo, musica, link) {
+  document.getElementById("playerModal").style.display = "flex";
+
+  document.getElementById("modalImg").src = img;
+  document.getElementById("modalTitulo").innerText = titulo;
+  document.getElementById("modalAudio").src = musica;
+  document.getElementById("spotifyLink").href = link;
+}
+
+function fecharModal() {
+  let modal = document.getElementById("playerModal");
+  let audio = document.getElementById("modalAudio");
+
+  modal.style.display = "none";
+  audio.pause();
+  audio.currentTime = 0;
+}
+
+// fechar clicando fora
+window.onclick = function(event) {
+  let modal = document.getElementById("playerModal");
+  if (event.target === modal) {
+    fecharModal();
+  }
+}
+
+// volume padrão
+window.onload = function() {
+  document.getElementById("modalAudio").volume = 0.25;
+}
+
+</script>
+
+             
+            
         </body>
 </html>

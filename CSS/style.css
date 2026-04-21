@@ -1,7 +1,9 @@
 /*código base para todas as páginas*/
 body {
-  background: linear-gradient(rgb(170, 190, 255), rgb(173, 255, 250));
+  min-height: 100vh;
   margin: 0;
+  background-color:#7023a3;
+  transition: background 0.6s ease-in-out;
 }
 
 .container-gabriel,
@@ -14,76 +16,49 @@ body {
   max-width:500px;
 }
 
-/* Container GABRIEL*/
-.container-gabriel {
-  background-color: rgb(224, 236, 255);
-  margin: 20px;
-  border-radius: 10px;
-  padding: 20px;
-}
-
 /* Muda a cor do fundo GABRIEL*/
-body:has(.container-gabriel .botao:hover){
-  background: rgb(32, 32, 32);
+body:has(.container-gabriel:hover){
+  background: #303030;
 }
 
-body:has(.container-gabriel .botao:hover) .container-gabriel{
-  background-color: rgb(184, 184, 184);
-}
-
-/* Container HARTUR*/
-.container-hartur {
-  background-color: rgb(224, 236, 255);
-  margin: 20px;
-  border-radius: 10px;
-  padding: 20px;
+body:has(.container-gabriel:hover) .container-gabriel{
+  background-color: #1d1d1d;
+  color: #f1f5f9;
 }
 
 /* Muda a cor do fundo HARTUR*/
-body:has(.container-hartur .botao:hover){
-  background: rgb(32, 87, 0);
+body:has(.container-hartur:hover){
+  background: #14532d;
 }
 
-body:has(.container-hartur .botao:hover) .container-hartur{
-  background-color: rgb(60, 255, 0);
-}
-
-/* Container JULIA*/
-.container-julia {
-  background-color: rgb(224, 236, 255);
-  margin: 20px;
-  border-radius: 10px;
-  padding: 20px;
+body:has(.container-hartur:hover) .container-hartur{
+  background-color: #166534;
+  color: #dcfce7;
 }
 
 /* Muda a cor do fundo JULIA*/
-body:has(.container-julia .botao:hover){
-  background: rgb(72, 157, 255);
+body:has(.container-julia:hover){
+  background: #1d4ed8;
 }
 
-body:has(.container-julia .botao:hover) .container-julia{
-  background-color: rgb(0, 26, 255);
-}
-
-/* Container LUCAS*/
-.container-lucas {
-  background-color: rgb(224, 236, 255);
-  margin: 20px;
-  border-radius: 10px;
-  padding: 20px;
+body:has(.container-julia:hover) .container-julia{
+  background-color: #1e40af;
+  color: #e0e7ff;
 }
 
 /* Muda a cor do fundo LUCAS*/
-body:has(.container-lucas .botao:hover){
-  background: rgb(255, 0, 0);
+body:has(.container-lucas:hover){
+  background: #be2323;
 }
 
-body:has(.container-lucas .botao:hover) .container-lucas{
-  background-color: rgb(255, 109, 109);
+body:has(.container-lucas:hover) .container-lucas{
+  background-color: #7f1d1d;
+  color: #fee2e2;
 }
 
 /*Imagem*/
 img{
+  align-content: center;
   width:100px;
   height:100px;
 
@@ -103,17 +78,20 @@ img{
 }
 
 .botao:hover {
-  background-color: #414141;
+  background-color: #313131;
   color:white;
-   
 }
 
 h1{
-  
-  padding-left: 50%;
+  font-size: 36px;
+  text-align: center;
   font-family: monospace;
   color: white;
+}
 
+h2{
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
 
 .grupo{
@@ -122,4 +100,21 @@ h1{
   gap: 40px;
   margin-top: 20px;
   justify-items: center;
+}
+
+.container-gabriel,
+.container-hartur,
+.container-julia,
+.container-lucas {
+  background-color: rgb(99, 97, 100);
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+li{
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
 }

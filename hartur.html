@@ -1,19 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="./CSS/hartur.css">
-    </head>
-        <body>
-            <div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hartur - Playlist</title>
+  <link rel="stylesheet" href="./CSS/hartur.css">
+</head>
 
-            </div>
-            <div>
-                <a href="./playlist.html">
-                <button class=botao>Página inicial</button>
-                </a>
-            </div>
-        </body>
+<body>
+
+    <h1>Playlist do Hartur</h1>
+
+    <div class="container-principal">
+
+    <h2>Tyler The Creator</h2>
+
+    <div class="grupo">
+
+        <div class="musica">
+        <img src="./Tyler/imagens/chromakopian.jpg"
+        onclick="abrirModal('./Tyler/imagens/chromakopian.jpg','Thought I Was Dead','./Tyler/audios/Thought I Was Dead (feat. ScHoolboy Q & Santigold) - Tyler, The Creator.mp3','https://open.spotify.com/intl-pt/track/2aYHxnMF2umAavtgBvmkY1?si=df0a41f156cf4479')">
+        <p>Thought I Was Dead</p>
+        </div>
+
+        <div class="musica">
+        <img src="./Tyler/imagens/Tyler-the-Creator-Igor.webp"
+        onclick="abrirModal('./Tyler/imagens/Tyler-the-Creator-Igor.webp','NEW MAGIC WAND','./Tyler/audios/NEW MAGIC WAND - Tyler, The Creator.mp3','https://open.spotify.com/intl-pt/track/0fv2KH6hac06J86hBUTcSf?si=21b77009d4c04ec0')">
+        <p>New Magic Wand</p>
+        </div>
+
+        <div class="musica">
+        <img src="./Tyler/imagens/dont tap the glass.jpg"
+        onclick="abrirModal('./Tyler/imagens/dont tap the glass.jpg','Don t Tap The Glass/Tweakin','./Tyler/audios/nao toque no vidro.mp3','https://open.spotify.com/intl-pt/track/5DRS7YEe1bwGJLDGviT3CD?si=2764b161861443f5')">
+        <p>Don't Tap the glass/Tweakin</p>
+        </div>
+
+        <div class="musica">
+        <img src="./Tyler/imagens/call me if you get lost.jpg"
+        onclick="abrirModal('./Tyler/imagens/call me if you get lost.jpg','SWEET/I THOUGHT YOU WANTED TO DANCE','./Tyler/audios/SWEET   I THOUGHT YOU WANTED TO DANCE (feat. Brent Faiyaz & Fana Hues) - Tyler, The Creator.mp3','https://open.spotify.com/intl-pt/track/3EG9FJ0ToLfgnc1IG2Z1wz?si=d3867843d9f0442a')">
+        <p>SWEET/I THOUGHT YOU WANTED TO DANCE</p>
+        </div>
+
+        <div class="musica">
+        <img src="./Tyler/imagens/flowerboy.jpg"
+        onclick="abrirModal('./Tyler/imagens/flowerboy.jpg','Foreword','./Tyler/audios/Foreword (feat. Rex Orange County) - Tyler, The Creator.mp3','https://open.spotify.com/intl-pt/track/33i3xxHB4YSYGYbtJrwwO8?si=c656ac10894548b5')">
+        <p>Foreword</p>
+        </div>
+
+    </div>
+
+    <h2>Brent Faiyaz</h2>
+
+    <div class="grupo">
+
+        <div class="musica">
+        <img src="./Brent/imagens/waseland.jpg"
+        onclick="abrirModal('./Brent/imagens/waseland.jpg','ALL MINE','./Brent/audios/ALL MINE - Brent Faiyaz.mp3','https://open.spotify.com/intl-pt/track/3XgGQ1wjo5khvq2UImjyNF?si=1a7b4f46ffda4e42')">
+        <p>ALL MINE</p>
+        </div>
+
+        <div class="musica">
+        <img src="./Brent/imagens/waseland.jpg"
+        onclick="abrirModal('./Brent/imagens/waseland.jpg','DEAD MAN WALKING','./Brent/audios/DEAD MAN WALKING - Brent Faiyaz.mp3','https://open.spotify.com/intl-pt/track/2c2tlXfEmLgUNvxngIi1qL?si=e21d68c813e14c96')">
+        <p>DEAD MAN WALKING</p>
+        </div>
+
+        <div class="musica">
+        <img src="./Brent/imagens/fuck the world.jpg"
+        onclick="abrirModal('./Brent/imagens/fuck the world.jpg','Rehab (Winter in paris)','./Brent/audios/Rehab (Winter In Paris) - Brent Faiyaz.mp3','https://open.spotify.com/intl-pt/track/0zWbYGQq5O1KQd0iqzgjP6?si=82614d51e645449a')">
+        <p>Rehab (Winter in paris)</p>
+        </div>
+
+        <div class="musica">
+        <img src="./Brent/imagens/large than life.jpg"
+        onclick="abrirModal('./Brent/imagens/large than life.jpg','WY@','./Brent/audios/WY@ - Brent Faiyaz.mp3','https://open.spotify.com/intl-pt/track/3ria9Axw5mheRAOoP9bnof?si=29bdbf01b17e429f')">
+        <p>WY@</p>
+        </div>
+
+        <div class="musica">
+        <img src="./Brent/imagens/poison.jpg"
+        onclick="abrirModal('./Brent/imagens/poison.jpg','Poison','./Brent/audios/Brent Faiyaz - Poison.mp3','https://open.spotify.com/intl-pt/track/5NijSs5dAwaIybq1GaRTIe?si=e5aef069a31944df')">
+        <p>Poison</p>
+        </div>
+
+    </div>
+
+    <div class="voltar">
+        <a href="./playlist.html">
+        <button class="botao">Página inicial</button>
+        </a>
+    </div>
+
+    </div>
+
+    <!-- MODAL -->
+    <div id="playerModal" class="modal">
+    <div class="modal-content">
+
+        <span class="fechar" onclick="fecharModal()">&times;</span>
+
+        <img id="modalImg">
+        <h2 id="modalTitulo"></h2>
+
+        <audio id="modalAudio" controls></audio>
+
+        <a id="spotifyLink" target="_blank">
+        <button class="botao">Ouvir no Spotify</button>
+        </a>
+
+    </div>
+    </div>
+
+    <script>
+
+    function abrirModal(img, titulo, musica, link) {
+    document.getElementById("playerModal").style.display = "flex";
+
+    document.getElementById("modalImg").src = img;
+    document.getElementById("modalTitulo").innerText = titulo;
+    document.getElementById("modalAudio").src = musica;
+    document.getElementById("spotifyLink").href = link;
+    }
+
+    function fecharModal() {
+    let modal = document.getElementById("playerModal");
+    let audio = document.getElementById("modalAudio");
+
+    modal.style.display = "none";
+    audio.pause();
+    audio.currentTime = 0;
+    }
+
+    // fechar clicando fora
+    window.onclick = function(event) {
+    let modal = document.getElementById("playerModal");
+    if (event.target === modal) {
+        fecharModal();
+    }
+    }
+
+    // volume padrão
+    window.onload = function() {
+    document.getElementById("modalAudio").volume = 0.25;
+    }
+
+    </script>
+
+</body>
 </html>
