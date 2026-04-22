@@ -2,7 +2,7 @@
 body {
   min-height: 100vh;
   margin: 0;
-  background-color:#7023a3;
+  background-color:#3f3f3f;
   transition: background 0.6s ease-in-out;
 }
 
@@ -10,6 +10,12 @@ body {
 .container-hartur,
 .container-julia,
 .container-lucas {
+  background-color: rgb(107, 107, 107);
+  margin: 20px;
+  border-radius: 10px;
+  padding: 100px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  border: 5px solid white;
   transition: 0.5s ease-in-out;
 
   width: 100%;
@@ -58,23 +64,25 @@ body:has(.container-lucas:hover) .container-lucas{
 
 /*Imagem*/
 img{
-  align-content: center;
-  width:100px;
-  height:100px;
-
+  margin-left: 55px;
+  width:170px;
+  height:170px;
   border-radius: 30%;
+  border:double rgb(255, 255, 255) 5px;
 }
 
 .botao {
+  font-family: monospace;
+  color: white;
   display: inline-block;
-
-  background-color: hsl(0, 0%, 100%);              
-  padding: 10px 20px;       
-  border:groove rgb(197, 197, 197);             
-  border-radius: 5px;       
+  background-color: hsl(0, 3%, 54%);              
+  padding: 15px 25px;       
+  border:groove rgb(255, 255, 255) 5px;             
+  border-radius: 50px;       
   cursor: pointer;          
   font-size: 16px;
   transition: background-color 0.3s; 
+  margin-left: 165px;
 }
 
 .botao:hover {
@@ -102,19 +110,30 @@ h2{
   justify-items: center;
 }
 
-.container-gabriel,
-.container-hartur,
-.container-julia,
-.container-lucas {
-  background-color: rgb(99, 97, 100);
-  margin: 20px;
-  border-radius: 10px;
-  padding: 20px;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
 li{
   color: white;
   font-family: monospace;
   font-size: 20px;
+}
+
+h3{
+  font-size: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.containerNomes{
+  justify-items: center;
+  background-color: rgb(107, 107, 107);
+  margin: 20px;
+  margin-left: 35%;
+  border-radius: 10px;
+  padding: 20px;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  border: 2px solid white;
+  transition: 0.5s ease-in-out;
+
+  width: 50%;
+  max-width:500px;  
+
 }
